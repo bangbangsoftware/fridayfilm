@@ -1,0 +1,15 @@
+{
+  "name": "fridayfilm",
+  "version": "1.0.0",
+  "description": "Whos film choice is it, what have we seen and what did we think and when",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "author": "Mick Carter",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}

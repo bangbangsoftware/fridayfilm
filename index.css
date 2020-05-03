@@ -1,0 +1,59 @@
+.history {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+a:link {
+    color: #8d1212;
+    text-decoration: none;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+a:active {
+    color: blue;
+}
+
+
+.icon {
+    font-size: 59px;
+    color: greenyellow;
+}
+
+.who {
+    color: white;
+}
+
+body {
+    background-color: black;
+    font-size: 40px;
+    color: #6e5353;
+    text-align: center;   
+
+}
+
+h1 {
+    color: #27642a;
+    font-size: 120px;
+}
+
+p {
+    font-size:100;
+}
+
+.statement {
+    font-size:75;    
+}
+
+#date {
+    font-size: 30px;
+    color: green;
+    text-align: center;
+}
