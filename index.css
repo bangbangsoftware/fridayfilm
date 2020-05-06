@@ -1,63 +1,140 @@
 .history {
-    display: grid;
-    grid-template-columns: 2fr 3fr 2fr 1fr;
-    grid-gap: 20px;
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr 1fr;
+  grid-gap: 20px;
 }
 
 .date {
- font-size: 30px;
+  font-size: 30px;
 }
 
 a:link {
-    color: #8d1212;
-    text-decoration: none;
+  color: #8d1212;
+  text-decoration: none;
 }
 
 a:visited {
-    color: green;
+  color: green;
 }
 
 a:hover {
-    color: hotpink;
+  color: hotpink;
 }
 
 a:active {
-    color: blue;
+  color: blue;
 }
-
 
 .icon {
-    font-size: 59px;
-    color: greenyellow;
+  font-size: 59px;
+  color: greenyellow;
 }
 
-.who {
-    color: white;
+.picked {
+  color: white;
+}
+
+.week {
+  font-size: 20px;
 }
 
 body {
-    background-color: black;
-    font-size: 40px;
-    color: #6e5353;
-    text-align: center;   
-
+  background-color: black;
+  font-size: 40px;
+  color: #6e5353;
+  text-align: center;
 }
 
 h1 {
-    color: #27642a;
-    font-size: 120px;
+  color: #27642a;
+  font-size: 120px;
 }
 
 p {
-    font-size:100;
+  font-size: 100;
 }
 
 .statement {
-    font-size:75;    
+  font-size: 75;
 }
 
 #date {
-    font-size: 30px;
-    color: green;
-    text-align: center;
+  font-size: 30px;
+  color: green;
+  text-align: center;
+}
+
+.fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* The style below is just for the appearance of the example div */
+
+.style {
+  width: 90vw;
+  height: 90vh;
+  text-align: center;
+  margin-left: 5vw;
+  background-color: #000;
+}
+.style p {
+  color: #fff;
+  font-size: 50px;
+}
+
+.last {
+  opacity: 0.3;
+}
+
+.next {
+  opacity: 0.4;
 }
