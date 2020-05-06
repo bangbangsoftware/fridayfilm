@@ -1,6 +1,4 @@
 const getPicked = (crew, today = new Date()) => {
-  crew.forEach((member, index) => console.log(index + ". " + member));
-
   const year = new Array(52);
   for (let x = 0; x < 53; x++) {
     const crewNo = x % crew.length;
@@ -15,8 +13,8 @@ const getPicked = (crew, today = new Date()) => {
     copiedDate.setUTCDate(
       copiedDate.getUTCDate() + 4 - (copiedDate.getUTCDay() || 7)
     );
-    var yearStart = new Date(Date.UTC(copiedDate.getUTCFullYear(), 0, 1));
-    var weekNo = Math.ceil(((copiedDate - yearStart) / 86400000 + 1) / 7);
+    const yearStart = new Date(Date.UTC(copiedDate.getUTCFullYear(), 0, 1));
+    const weekNo = Math.ceil(((copiedDate - yearStart) / 86400000 + 1) / 7);
     return weekNo;
   };
 
@@ -37,17 +35,18 @@ const update = (id, text) => {
 };
 
 const updates = (idTexts) =>
-  idTexts.forEach((d) => {
-    const key = Object.keys(d)[0];
-    update(key, d[key]);
+  idTexts.forEach((data) => {
+    const key = Object.keys(data)[0];
+    update(key, data[key]);
   });
 
-const today = new Date();
-const { last, picked, next, weekNo } = getPicked(
-  ["Paxo", "Claire", "Karl", "Mick"],
-  today
-);
+const go = (...crew) => {
+  const today = new Date();
+  const { last, picked, next, weekNo } = getPicked(crew, today);
+  const date = new Intl.DateTimeFormat("en-GB").format(today);
+  const week = "(Week " + weekNo + ")";
 
-const date = new Intl.DateTimeFormat("en-GB").format(today);
-const week = "(Week " + weekNo + ")";
-updates([{ picked }, { next }, { last }, { date }, { week }]);
+  updates([{ picked }, { next }, { last }, { date }, { week }]);
+};
+
+go("Paxo", "Claire", "Karl", "Mick");
