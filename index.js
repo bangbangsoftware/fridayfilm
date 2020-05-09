@@ -15,7 +15,8 @@ const getPicked = (crew, today = new Date()) => {
     );
     const yearStart = new Date(Date.UTC(copiedDate.getUTCFullYear(), 0, 1));
     const weekNo = Math.ceil(((copiedDate - yearStart) / 86400000 + 1) / 7);
-    return weekNo;
+
+    return date % 6 ? weekNo + 1 : weekNo; // weekend jump to next week.
   };
 
   const weekNo = getWeekNumber(today);
@@ -49,4 +50,4 @@ const go = (...crew) => {
   updates([{ picked }, { next }, { last }, { date }, { week }]);
 };
 
-go("Claire", "Karl", "Mick", "Paxo");
+go("Paxo", "Claire", "Karl", "Mick");
