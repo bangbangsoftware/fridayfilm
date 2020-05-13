@@ -16,7 +16,9 @@ const getPicked = (crew, today = new Date()) => {
     const yearStart = new Date(Date.UTC(copiedDate.getUTCFullYear(), 0, 1));
     const weekNo = Math.ceil(((copiedDate - yearStart) / 86400000 + 1) / 7);
 
-    return date % 6 ? weekNo + 1 : weekNo; // weekend jump to next week.
+    const isWeekend = date.getUTCDay() == 6 || date.getUTCDay() == 0;
+
+    return isWeekend ? weekNo + 1 : weekNo; // weekend jump to next week.
   };
 
   const weekNo = getWeekNumber(today);
