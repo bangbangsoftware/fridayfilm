@@ -53,4 +53,4 @@ const go = (...crew) => {
   updates([{ picked }, { next }, { last }, { date }, { week }]);
 };
 
-go("Paxo", "Claire", "Karl", "Mick");
+go("Claire", "Karl", "Mick");
